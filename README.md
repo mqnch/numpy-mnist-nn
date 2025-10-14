@@ -32,9 +32,23 @@ epoch 01 | loss = 0.1344 | train_acc = 95.96%
 epoch 02 | loss = 0.0750 | train_acc = 97.78%
 [5 0 4 ... 5 6 8] [5 0 4 ... 5 6 8]
 epoch 03 | loss = 0.0466 | train_acc = 98.69%
+[5 0 4 ... 5 6 8] [5 0 4 ... 5 6 8]
+epoch 04 | loss = 0.0318 | train_acc = 99.06%
+[5 0 4 ... 5 6 8] [5 0 4 ... 5 6 8]
+epoch 05 | loss = 0.0240 | train_acc = 99.28%
+[5 0 4 ... 5 6 8] [5 0 4 ... 5 6 8]
+epoch 06 | loss = 0.0199 | train_acc = 99.37%
+[5 0 4 ... 5 6 8] [5 0 4 ... 5 6 8]
+epoch 07 | loss = 0.0144 | train_acc = 99.61%
+[5 0 4 ... 5 6 8] [5 0 4 ... 5 6 8]
+epoch 08 | loss = 0.0113 | train_acc = 99.69%
+[5 0 4 ... 5 6 8] [5 0 4 ... 5 6 8]
+epoch 09 | loss = 0.0078 | train_acc = 99.82%
+[5 0 4 ... 5 6 8] [5 0 4 ... 5 6 8]
+epoch 10 | loss = 0.0063 | train_acc = 99.83%
 evaluating on test set...
 [7 2 1 ... 4 5 6] [7 2 1 ... 4 5 6]
-test accuracy: 0.9763
+test accuracy: 0.9814
 ```
 
 

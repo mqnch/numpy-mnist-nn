@@ -46,9 +46,12 @@ def init_params(hidden=128, seed=42):
     b2 = np.zeros((10, 1), dtype=np.float32)
     return W1, b1, W2, b2
 
-# relu activation
+LEAKY_ALPHA = 0.01 
+
+# leaky ReLU activation
 def ReLU(Z):
-    return np.maximum(0, Z)
+    # leaky relu
+    return np.where(Z > 0, Z, LEAKY_ALPHA * Z)
 
 # softmax activation
 def softmax(Z):
@@ -72,9 +75,11 @@ def one_hot(Y):
     one_hot_Y[Y, np.arange(m)] = 1.0
     return one_hot_Y
 
-# derivative of relu
+# derivative of leaky relu
 def deriv_ReLU(Z):
-    return (Z > 0).astype(np.float32)
+    grad = np.ones_like(Z, dtype=np.float32)
+    grad[Z < 0] = LEAKY_ALPHA
+    return grad
 
 # backward pass
 def back_prop(Z1, A1, Z2, A2, W2, X, Y):
@@ -219,7 +224,7 @@ def main():
 
     # train network
     print("training...")
-    W1, b1, W2, b2 = gradient_descent(X, Y, epochs=3, alpha=0.05, batch_size=256, hidden=128, seed=42,  optimizer="adam")
+    W1, b1, W2, b2 = gradient_descent(X, Y, epochs=10, alpha=0.01, batch_size=1024, hidden=512, seed=1,  optimizer="adam")
 
     # test network
     print("evaluating on test set...")

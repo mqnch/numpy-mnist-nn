@@ -19,7 +19,7 @@ a small neural network built from scratch using numpy. it trains on the classic 
 ### running it
 make sure your mnist files are in the same folder as `main.py`, then run:
 ```bash
-python main.py
+python3 main.py
 ```
 
 #### sample output:

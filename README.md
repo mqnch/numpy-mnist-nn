@@ -8,7 +8,7 @@ a small neural network built from scratch using numpy. it trains on the classic 
 ## features
 - loads mnist `.idx` data files  
 - normalizes pixel values (0–1)  
-- 2-layer network with relu + softmax  
+- 2-layer network with leaky relu + softmax  
 - mini-batch training  
 - adam optimizer  
 - prints loss + accuracy per epoch
